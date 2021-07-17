@@ -24,6 +24,7 @@ describe('<MovieReviews />', () => {
         wrapper = shallow(<MovieReviews reviews={testReviews} />)
       } else {
         wrapper = mount(<MovieReviews reviews={testReviews} />)
+        // console.log(wrapper)
       }
     }
   });
@@ -42,6 +43,7 @@ describe('<MovieReviews />', () => {
   });
 
   it('should render all the reviews', () => {
+    // console.log(wrapper.find('.review').length)
     expect(wrapper.find('.review').length).to.equal(testReviews.length);
   });
 });

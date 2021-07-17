@@ -42,9 +42,9 @@ export default class SearchableMovieReviewsContainer extends Component {
           <button type='submit'>Search</button>
         </form>
         
-        <ol className='movie-reviews'>
-          {this.state.reviews.map(reviewData => <MovieReviews key={reviewData.display_title} review={reviewData.link.url} />)}
-        </ol>
+        <div className='movie-reviews'>
+          <MovieReviews reviews={this.state.reviews} />
+        </div>
       </div>
     )
   }

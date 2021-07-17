@@ -3,9 +3,9 @@
 import React from 'react'
 
 const MovieReviews = props => (
-  <li className='review-list'>
-    <p className='review'>{props.review}</p>
-  </li>
+  <ol className='review-list'>
+    {props.reviews.map((review,idx)=><li key={idx} className='review'>{review.link.url}</li>)}
+  </ol>
   )
 
 export default MovieReviews
